@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+:root {
+  --primary-color: #f12639;
+  --primary-bg-color: #1f2749;
+  --max-width: 768px;
+  --bg-contrast: #f4c90b;
+}
+i {
+  padding: 0 0.5rem;
+}
+.lead {
+  text-align: center;
+  color: #fff;
+  font-size: 3.5rem;
+}
+.container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
+  height: 100%;
+}
+.span-letter {
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: 700;
+}
+.head {
+  color: #fff;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+.btn-primary {
+  background: var(--primary-color);
+  padding: 0.15rem 0.3rem;
+  border: var(--primary-bg-color) solid 2px;
+  border-radius: 10px;
+  transition: background 0.5s ease-out;
+  transition: color 0.5s ease-out 0.1s;
+}
+.btn-primary:hover {
+  transform: translateX(5px);
+  background: #fff;
+  color: #333;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  line-height: 1.5;
+  font-family: 'Montserrat', 'Oswald', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+#main-nav {
+  position: sticky;
+  top: 0;
+  background: var(--primary-bg-color);
+  color: #fff;
+}
+#main-nav {
+  z-index: 2;
+  padding: 0.25rem 0 0.1rem 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+#main-nav ul {
+  list-style: none;
+  display: flex;
+}
+#main-nav ul li a {
+  padding: 0.75rem;
+  text-decoration: none;
+  color: #fff;
+  margin-right: 0.1rem;
+  transition: background, color 0.5s ease;
+}
+#main-nav ul li a.current {
+  background: #f12639;
+  text-align: center;
+  transition: none;
+  border-bottom: 1px solid white;
+}
+#main-nav ul li a:hover {
+  background: #f12639;
+  color: #333;
+}
+i {
+  height: 100%;
+}
+img {
+  height: 100%;
+}
+li {
+  list-style: none;
+  padding: 0.7rem;
+}
+/* Showcase Section */
+#showcase {
+  height: 90vh;
+  position: relative;
+  background: url('../img/laptop-3190194.jpg') no-repeat center center/cover;
+}
+#showcase::before {
+  content: '';
+  background: #000;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+#showcase .showcase-content h3 {
+  font-family: 'Dancing Script';
+  padding-bottom: 1.5rem;
+}
+#showcase .container .showcase-content {
+  z-index: 1;
+  text-align: center;
+}
+#showcase .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#showcase {
+  border-bottom: 8px solid #353c5b;
+}
+/* Section-b */
+#sec-b .items {
+  display: flex;
+  background: var(--primary-bg-color);
+  color: var(--bg-contrast);
+  justify-content: center;
+  height: 100%;
+}
+#sec-b .items .item2 {
+  background: url('../img/code-1839406.jpg') no-repeat center center/cover;
+  display: block;
+  width: 50%;
+  height: 300px;
+  margin-right: 2.5rem;
+  order: 0;
+}
+#sec-b .items .item1 {
+  order: 1;
+  display: block;
+  line-height: 1.5rem;
+  width: 50%;
+}
+#sec-b .items .item1 p {
+  margin-left: 0.7rem;
+}
+.fa-chevron-circle-right {
+  margin-left: 1.5rem;
+  margin-right: 0.5rem;
+}
+#sec-b {
+  border-bottom: 8px solid #353c5b;
+}
+/* Sec-c */
+#sec-c {
+  background: var(--primary-bg-color);
+  border-bottom: 8px solid #353c5b;
+}
+#sec-c .container #faq ul li {
+  border: 1px solid black;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  margin: auto;
+  /* margin-top: 2px; */
+}
+#sec-c .container #faq ul li input {
+  /* display: inline-block; */
+  opacity: 0;
+  cursor: pointer;
+}
+
+#sec-c .container #faq ul li input ~ .ans {
+  /* display: block; */
+  visibility: hidden;
+  max-height: 0;
+  color: var(--primary-color);
+  opacity: 0;
+  transition: max-height 1s ease, opacity 1s ease;
+  /* transition: height 1s ease-in-out; */
+}
+#sec-c .container #faq ul li input:checked ~ .ans {
+  /* display: block; */
+  max-height: 1000px;
+  opacity: 1;
+  visibility: visible;
+}
+/* Logos */
+#target {
+  display: block;
+  height: 140px;
+  width: 140px;
+  background: var(--primary-bg-color);
+  margin: auto;
+}
